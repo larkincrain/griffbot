@@ -6,7 +6,7 @@ var RTM_CLIENT_EVENTS = require('@slack/client').CLIENT_EVENTS.RTM;
 var CLIENT_EVENTS = require('@slack/client').CLIENT_EVENTS;
 var RtmClient = require('@slack/client').RtmClient;
 
-var token = 'xoxb-85805621765-5cX8Nx8FiaAPJrYrPt8tmGIn';
+var token = '';
 var griffBot = new RtmClient(token, {logLvel: 'debug'});
 
 var teamConversationList = {};
@@ -51,6 +51,9 @@ griffBot.on(RTM_EVENTS.MESSAGE, function (message) {
       }
     );
   }
+  else if (message.text.indexOf('eric')
+
+    && message.text.indexOf('question'))
 });
 
 // you need to wait for the client to fully connect before you can send messages
